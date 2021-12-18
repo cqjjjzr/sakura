@@ -46,12 +46,9 @@ $the_cat = get_the_category();
 				</div>
 				<div class="float-content">
 					<?php substr(the_excerpt() , 0 , 3); ?>
-					<div class="post-bottom">
-						<a href="<?php the_permalink(); ?>" class="button-normal"><i class="iconfont icon-caidan"></i></a>
-					</div>
 				</div>
 			</div>
 		</div>
 	</article>
 <?php
-endwhile; 
+endwhile;

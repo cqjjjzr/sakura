@@ -295,7 +295,7 @@ function the_headPattern(){
         $edit_this_post_link = '';
     }
     $t .= the_title( '<h1 class="entry-title">', '</h1>', false);
-    $t .= '<p class="entry-census"><span><a href="'. esc_url(get_author_posts_url(get_the_author_meta('ID'),get_the_author_meta( 'user_nicename' ))) .'"><img src="'. get_avatar_url( get_the_author_meta('ID'), 64 )/*$ava*/ .'"></a></span><span><a href="'. esc_url(get_author_posts_url(get_the_author_meta('ID'),get_the_author_meta( 'user_nicename' ))) .'">'. get_the_author() .'</a></span><span class="bull">·</span>'. poi_time_since(get_post_time('U', true),false,true) .'<span class="bull">·</span>'. get_post_views(get_the_ID()) .' '._n("View","Views",get_post_views(get_the_ID()),"sakura")/*次阅读*/.$edit_this_post_link.'</p>';
+    $t .= '<p class="entry-census"><span><a href="#"><img src="'. get_avatar_url( get_the_author_meta('ID'), 64 )/*$ava*/ .'"></a></span><span><a href="#">'. get_the_author() .'</a></span><span class="bull">·</span>'. poi_time_since(get_post_time('U', true),false,true) .'<span class="bull">·</span>'. get_post_views(get_the_ID()) .' '._n("View","Views",get_post_views(get_the_ID()),"sakura")/*次阅读*/.$edit_this_post_link.'</p>';
     endwhile; endif;
   }elseif(is_page()){
     $full_image_url = $full_image_url[0];
@@ -310,15 +310,21 @@ function the_headPattern(){
     $t .= '<h1 class="entry-title search-title"> '.sprintf( __( "Search results for \" %s \"","sakura" ), get_search_query()) ./*关于“ '.get_search_query().' ”的搜索结果*/'</h1>';
   }
   if(akina_option('patternimg')) $full_image_url = false;
-  if(!is_home() && $full_image_url) : ?>
-  <div class="pattern-center-blank"></div>
-  <div class="pattern-center <?php if(is_single()){echo $center;} ?>">
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg)" data-src="<?php echo $full_image_url; ?>"> </div>
-    <header class="pattern-header <?php if(is_single()){echo $header;} ?>"><?php echo $t; ?></header>
-  </div>
-  <?php else :
-    echo '<div class="blank"></div>';
-  endif;
+    if(!is_home() && $full_image_url) : ?>
+    <div class="pattern-center-blank"></div>
+    <div class="pattern-center <?php if(is_single()){echo $center;} ?>">
+      <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg)" data-src="<?php echo $full_image_url; ?>"> </div>
+      <header class="pattern-header <?php if(is_single()){echo $header;} ?>"><?php echo $t; ?></header>
+    </div>
+    <?php elseif(is_single() && !($full_image_url)) : ?>
+      <div class="pattern-center-blank"></div>
+      <div class="pattern-center <?php echo $center; ?>">
+        <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/moezx/cdn@3.0.1/img/svg/loader/orange.progress-bar-stripe-loader.svg)" data-src="<?php echo get_random_bg_url(); ?>"> </div>
+        <header class="pattern-header <?php echo $header; ?>"><?php echo $t; ?></header>
+      </div>
+    <?php else :
+      echo '<div class="blank"></div>';
+    endif;
 }
 
 /*视频封面*/

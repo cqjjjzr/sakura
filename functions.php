@@ -1910,3 +1910,11 @@ function permalink_tip()
 }
 add_action('admin_notices', 'permalink_tip');
 //code end
+//
+//add_action( 'shutdown', 'wpse115322_upload_sizes', 99 );
+//function wpse115322_upload_sizes() {
+//    $size = wp_max_upload_size();
+//    $kb = $size/1024;
+//    $mb = $size/(1024*1024);
+//    echo( "$kb KB / $mb MB<br />\n" );
+//}

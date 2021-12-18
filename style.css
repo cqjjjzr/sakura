@@ -12,6 +12,252 @@ Text Domain: sakura
 Tags: 樱花庄的白猫
 */
 
+/* CHARIRI CUSTOMIZE BEGIN */
+/*诗*/
+.poem-wrap {
+    position: relative;
+    width: 730px;
+    max-width: 80%;
+    border: 2px solid #797979;
+    border-top: none;
+    text-align: center;
+    margin: 80px auto;
+}
+
+.poem-wrap h1 {
+    position: relative;
+    margin-top: -20px;
+    display: inline-block;
+    letter-spacing: 4px;
+    color: #797979
+}
+
+.poem-wrap p {
+    width: 70%;
+    margin: auto;
+    line-height: 30px;
+    color: #797979;
+}
+
+.poem-wrap p#poem {
+    font-size: 25px;
+}
+
+.poem-wrap p#info {
+    font-size: 15px;
+    margin: 15px auto;
+}
+
+.poem-border {
+    position: absolute;
+    height: 2px;
+    width: 27%;
+    background-color: #797979;
+}
+
+.poem-right {
+    right: 0;
+}
+
+.poem-left {
+    left: 0;
+}
+
+@media (max-width: 685px) {
+    .poem-border {
+        width: 18%;
+    }
+}
+
+@media (max-width: 500px) {
+    .poem-wrap {
+        margin-top: 60px;
+        margin-bottom: 20px;
+        border-top: 2px solid #797979;
+    }
+
+    .poem-wrap h1 {
+        margin: 20px 6px;
+    }
+
+    .poem-border {
+        display: none;
+    }
+}
+
+/* LOGO */
+/* 注意去掉了 .no */
+.miao {
+    font-family: 'chaririya', 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.logolink .sakuraso {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 5px;
+    color: #464646;
+    height: auto;
+    line-height: 25px;
+    margin-right: 0;
+    padding-bottom: 0px;
+    padding-top: 1px;
+    text-size-adjust: 100%;
+    width: auto;
+}
+
+.logolink a:hover .sakuraso {
+    background-color: orange;
+    color: #fff;
+}
+
+.logolink a:hover .shironeko,
+.logolink a:hover rt {
+    color: orange;
+}
+
+.logolink.miao a {
+    color: #464646;
+    float: left;
+    font-size: 25px;
+    font-weight: 800;
+    height: 56px;
+    line-height: 56px;
+    padding-left: 6px;
+    padding-right: 15px;
+    padding-top: 11px;
+    text-decoration-line: none;
+}
+
+
+.logolink ruby {
+    ruby-position: under;
+    -webkit-ruby-position: after;
+}
+
+.logolink ruby rt {
+    font-size: 10px;
+    transform: translateY(-15px);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s, 0.5s;
+}
+
+.logolink a:hover ruby rt {
+    opacity: 1;
+}
+
+/* 首页下拉箭头 */
+.headertop-bar::after {
+    content: '';
+    width: 150%;
+    height: 4.375rem;
+    background: #fff;
+    left: -25%;
+    bottom: -2.875rem;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 4;
+}
+
+.headertop-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+@media (max-width: 860px) {
+    .headertop-down {
+        display: none
+    }
+}
+
+.headertop-down i {
+    font-size: 28px;
+    color: #fff;
+    -ms-transform: scale(1.5,1); /* IE 9 */
+    -webkit-transform: scale(1.5,1); /* Safari */
+    transform: scale(1.5,1); /* Standard syntax */
+}
+
+/* 菜单栏居中 */
+.site-header.is-homepage .lower-cantiner {
+    display: none;
+}
+.site-header.is-homepage.yya .lower-cantiner {
+    display: block;
+}
+.site-header:hover.is-homepage .lower-cantiner {
+    display: block;
+}
+.site-top .lower-cantiner {
+    position: absolute;
+    left: 50%;
+    min-width: 758.4px;
+    pointer-events: none;
+}
+#show-nav.mobile-fit {
+    position: fixed !important;
+    right: 120px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* index page wave effect: */
+#banner_wave_1 {
+    width: auto;
+    height: 65px;
+    background: url(http://chariri.moe/wp-content/themes/sakura/images/wave_1.png) repeat-x;
+    _filter: alpha(opacity=80);
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    left: -236px;
+    z-index: 5;
+    opacity: 1;
+    transiton-property: opacity, bottom;
+    transition-duration: .4s, .4s;
+    animation-name: move2;
+    animation-duration: 240s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#banner_wave_2 {
+    width: auto;
+    height: 80px;
+    background: url(http://chariri.moe/wp-content/themes/sakura/images/wave_2.png) repeat-x;
+    _filter: alpha(opacity=80);
+    position: absolute;
+    bottom: 0;
+    width: 400%;
+    left: 0;
+    z-index: 4;
+    opacity: 1;
+    transiton-property: opacity, bottom;
+    transition-duration: .4s, .4s;
+    animation-name: move2;
+    animation-duration: 160s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* move1和move2只是方向不同，根据喜好自选即可。 */
+/* 没做浏览器适配，具体哪些浏览器会生效未知，反正Chrome没什么问题。*/
+
+@keyframes move1 {
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+@keyframes move2 {
+    100% {
+        background-position: -100% 0;
+    }
+}
+
 #content {
     animation: main 1s
 }
@@ -82,6 +328,8 @@ Tags: 樱花庄的白猫
         transform: translateX(0)
     }
 }
+
+/* CHARIRI CUSTOMIZE END */
 
 html {
     font-family: sans-serif;
@@ -1064,8 +1312,13 @@ a:hover {
 .site-top .lower {
     position: relative;
     display: inline-block;
-    float: right;
-    margin: 15px 0 0 0;
+/* CHARIRI CUSTOMIZE BEGIN */
+    /* float: right; */
+    /* margin: 15px 0 0 0; */
+    left: -50%;
+    margin: 15px 0 0 10px;
+    pointer-events: auto !important;
+/* CHARIRI CUSTOMIZE END */
     font-size: 16px
 }
 
@@ -1145,7 +1398,9 @@ a:hover {
 
 @media(max-width:1200px) {
     .site-top .lower nav{
-        right: calc(-150px - 100%);
+/* CHARIRI CUSTOMIZE BEGIN */
+        /* right: calc(-150px - 100%); */
+/* CHARIRI CUSTOMIZE END */
         position: absolute;
         float: right;
         animation: searchbox .2s;
