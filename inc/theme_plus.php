@@ -75,10 +75,12 @@ function poi_time_since($older_date, $comment_date = false, $text = false, $upda
     $since = abs($newer_date - $older_date);
     if ($text) {
         $output = '';
-    } else if (!$update_time) {
-        $output = __('Posted on ', 'sakura') /*发布于*/;
     } else {
-        $output = __('Last updated on ', 'sakura') /*更新于*/;
+        if ($update_time) {
+            $output = __('Last updated on ', 'sakura') /*更新于*/;
+        } else {
+            $output = __('Posted on ', 'sakura') /*发布于*/;
+        }
     }
 
     if ($since < 30 * 24 * 60 * 60) {
@@ -339,9 +341,9 @@ function the_headPattern()
                 $t .= '<p class="entry-census">';
                 $t .= '<span><a href="#"><img src="' . get_avatar_url(get_the_author_meta('ID'), 64) /*$ava*/. '"></a></span>';
                 $t .= '<span><a href="#">' . get_the_author() . '</a></span>';
-                $t .= '<span class="bull">·</span>' . poi_time_since($post_time, false, true);
-                if ($post_time != $update_time)
-                    $t .= '<span class="bull">·</span>' . poi_time_since($update_time, false, true, true);
+                $t .= '<span class="bull">·</span>' . poi_time_since($post_time, true, true);
+                if ($post_time < $update_time)
+                    $t .= '<span class="bull">·</span>' . poi_time_since($update_time, false, false, true);
                 $t .= '<span class="bull">·</span>' . get_post_views(get_the_ID()) . ' ' . _n("View", "Views", get_post_views(get_the_ID()), "sakura") /*次阅读*/;
                 $t .= $edit_this_post_link . '</p>';
             endwhile;
