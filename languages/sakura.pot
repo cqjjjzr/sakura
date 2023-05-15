@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-05-15T11:06:03+00:00\n"
+"POT-Creation-Date: 2023-05-15T11:22:46+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: sakura\n"
@@ -152,7 +152,7 @@ msgid "Nav Menus"
 msgstr ""
 
 #: functions.php:451
-#: inc/theme_plus.php:204
+#: inc/theme_plus.php:207
 #: options.php:127
 msgid "Author"
 msgstr ""
@@ -197,7 +197,7 @@ msgstr ""
 msgid "<b> For a better experience, please do not set <a href=\"/wp-admin/options-permalink.php\"> permalink </a> as plain. To do this, you may need to configure <a href=\"https://www.wpdaxue.com/wordpress-rewriterule.html\" target=\"_blank\"> pseudo-static </a>. </ b>"
 msgstr ""
 
-#: header.php:37
+#: header.php:40
 msgid "page %s "
 msgstr ""
 
@@ -226,7 +226,7 @@ msgid "no image"
 msgstr ""
 
 #: inc/classes/Cache.php:70
-#: inc/theme_plus.php:825
+#: inc/theme_plus.php:837
 msgid "The comment is private"
 msgstr ""
 
@@ -325,82 +325,86 @@ msgstr ""
 msgid "Posted on "
 msgstr ""
 
-#: inc/theme_plus.php:141
+#: inc/theme_plus.php:81
+msgid "Last updated on "
+msgstr ""
+
+#: inc/theme_plus.php:143
 msgid "Please upgrade wordpress to version 4.4+"
 msgstr ""
 
-#: inc/theme_plus.php:252
+#: inc/theme_plus.php:255
 msgid "dashboard"
 msgstr ""
 
-#: inc/theme_plus.php:254
+#: inc/theme_plus.php:257
 msgid "home"
 msgstr ""
 
-#: inc/theme_plus.php:261
+#: inc/theme_plus.php:264
 msgid "Login successful, "
 msgstr ""
 
-#: inc/theme_plus.php:261
+#: inc/theme_plus.php:264
 msgid "seconds later automatically transfer to"
 msgstr ""
 
-#: inc/theme_plus.php:289
+#: inc/theme_plus.php:292
 msgid "Change avatar"
 msgstr ""
 
-#: inc/theme_plus.php:292
+#: inc/theme_plus.php:295
 msgid "Hello, "
 msgstr ""
 
-#: inc/theme_plus.php:301
+#: inc/theme_plus.php:304
 msgid "Home"
 msgstr ""
 
-#: inc/theme_plus.php:303
+#: inc/theme_plus.php:306
 msgid "Manage"
 msgstr ""
 
-#: inc/theme_plus.php:305
+#: inc/theme_plus.php:308
 msgid "Logout"
 msgstr ""
 
-#: inc/theme_plus.php:306
+#: inc/theme_plus.php:309
 msgid "Sign out? "
 msgstr ""
 
-#: inc/theme_plus.php:334
-#: inc/theme_plus.php:408
-#: inc/theme_plus.php:488
+#: inc/theme_plus.php:345
+#: inc/theme_plus.php:420
+#: inc/theme_plus.php:500
 #: tpl/single-image.php:18
 msgid "View"
 msgid_plural "Views"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/theme_plus.php:347
-#: inc/theme_plus.php:424
-#: inc/theme_plus.php:504
+#: inc/theme_plus.php:359
+#: inc/theme_plus.php:436
+#: inc/theme_plus.php:516
 msgid "Search results for \" %s \""
 msgstr ""
 
-#: inc/theme_plus.php:483
+#: inc/theme_plus.php:495
 msgid "EDIT"
 msgstr ""
 
-#: inc/theme_plus.php:559
+#: inc/theme_plus.php:571
 msgid "Dashboard"
 msgstr ""
 
-#: inc/theme_plus.php:560
+#: inc/theme_plus.php:572
 msgid "New post"
 msgstr ""
 
-#: inc/theme_plus.php:562
+#: inc/theme_plus.php:574
 msgid "Profile"
 msgstr ""
 
-#: inc/theme_plus.php:563
+#: inc/theme_plus.php:575
 msgid "Sign out"
 msgstr ""
 
@@ -1697,21 +1701,21 @@ msgstr ""
 
 #: tpl/content-image.php:35
 #: tpl/content-status.php:31
-#: tpl/content-thumb.php:43
+#: tpl/content-thumb.php:59
 #: tpl/content.php:34
 msgid "Comment"
 msgstr ""
 
 #: tpl/content-image.php:35
 #: tpl/content-status.php:31
-#: tpl/content-thumb.php:43
+#: tpl/content-thumb.php:59
 #: tpl/content.php:34
 msgid "Comments"
 msgstr ""
 
 #: tpl/content-image.php:38
 #: tpl/content-status.php:34
-#: tpl/content-thumb.php:42
+#: tpl/content-thumb.php:56
 #: tpl/content.php:37
 msgid "Hit"
 msgid_plural "Hits"
@@ -1738,7 +1742,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: tpl/content-single.php:27
+#: tpl/content-single.php:31
 msgid "Attribution-NonCommercial-ShareAlike 4.0 International"
 msgstr ""
 
