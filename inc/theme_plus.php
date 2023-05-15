@@ -342,7 +342,7 @@ function the_headPattern()
                 $t .= '<span><a href="#"><img src="' . get_avatar_url(get_the_author_meta('ID'), 64) /*$ava*/. '"></a></span>';
                 $t .= '<span><a href="#">' . get_the_author() . '</a></span>';
                 $t .= '<span class="bull">·</span>' . poi_time_since($post_time, true, true);
-                if ($post_time < $update_time)
+                if ($update_time - $post_time > 240)
                     $t .= '<span class="bull">·</span>' . poi_time_since($update_time, false, false, true);
                 $t .= '<span class="bull">·</span>' . get_post_views(get_the_ID()) . ' ' . _n("View", "Views", get_post_views(get_the_ID()), "sakura") /*次阅读*/;
                 $t .= $edit_this_post_link . '</p>';

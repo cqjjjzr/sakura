@@ -43,7 +43,7 @@ while (have_posts()):
                     $update_time = get_post_modified_time('U', true);
                     echo poi_time_since($post_time); ?>
                     <?php
-                    if ($update_time > $post_time): ?>
+                    if ($update_time - $post_time > 240): ?>
                         &nbsp;
                         <?php echo poi_time_since($update_time, false, false, true); ?>
                     <?php endif ?>
