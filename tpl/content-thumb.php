@@ -39,6 +39,9 @@ while (have_posts()):
                 <div class="post-date">
                     <i class="iconfont icon-time"></i>
                     <?php echo poi_time_since(strtotime($post->post_date_gmt)); ?>
+                    <?php if ($post->post_date_gmt != $post->post_modified_gmt): ?>
+                        &nbsp;<?php echo poi_time_since(strtotime($post->post_modified_gmt), false, true, true); ?>
+                    <?php endif ?>
                     <?php if (is_sticky()): ?>
                         &nbsp;<i class="iconfont hotpost icon-hot"></i>
                     <?php endif ?>

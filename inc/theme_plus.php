@@ -59,7 +59,7 @@ function get_random_bg_url()
  * poi_time_since(strtotime($post->post_date));
  * poi_time_since(strtotime($comment->comment_date), true );
  */
-function poi_time_since($older_date, $comment_date = false, $text = false)
+function poi_time_since($older_date, $comment_date = false, $text = false, $update_time = false)
 {
     $chunks = array(
         array(24 * 60 * 60, __(' days ago', 'sakura')),
@@ -75,8 +75,10 @@ function poi_time_since($older_date, $comment_date = false, $text = false)
     $since = abs($newer_date - $older_date);
     if ($text) {
         $output = '';
-    } else {
+    } else if (!$update_time) {
         $output = __('Posted on ', 'sakura') /*发布于*/;
+    } else {
+        $output = __('Last updated on ', 'sakura') /*更新于*/;
     }
 
     if ($since < 30 * 24 * 60 * 60) {
@@ -173,6 +175,7 @@ function scp_comment_post($incoming_comment)
 }
 // add_filter('preprocess_comment', 'scp_comment_post');
 // 国际化很重要
+// ↑但为什么没有正确处理时区？？
 // 评论提交
 if (!function_exists('siren_ajax_comment_callback')) {
     function siren_ajax_comment_callback()
@@ -330,8 +333,17 @@ function the_headPattern()
                 } else {
                     $edit_this_post_link = '';
                 }
+                $post_time = get_post_time('U', true);
+                $update_time = get_post_modified_time('U', true);
                 $t .= the_title('<h1 class="entry-title">', '</h1>', false);
-                $t .= '<p class="entry-census"><span><a href="#"><img src="' . get_avatar_url(get_the_author_meta('ID'), 64) /*$ava*/. '"></a></span><span><a href="#">' . get_the_author() . '</a></span><span class="bull">·</span>' . poi_time_since(get_post_time('U', true), false, true) . '<span class="bull">·</span>' . get_post_views(get_the_ID()) . ' ' . _n("View", "Views", get_post_views(get_the_ID()), "sakura") /*次阅读*/. $edit_this_post_link . '</p>';
+                $t .= '<p class="entry-census">';
+                $t .= '<span><a href="#"><img src="' . get_avatar_url(get_the_author_meta('ID'), 64) /*$ava*/. '"></a></span>';
+                $t .= '<span><a href="#">' . get_the_author() . '</a></span>';
+                $t .= '<span class="bull">·</span>' . poi_time_since($post_time, false, true);
+                if ($post_time != $update_time)
+                    $t .= '<span class="bull">·</span>' . poi_time_since($update_time, false, true, true);
+                $t .= '<span class="bull">·</span>' . get_post_views(get_the_ID()) . ' ' . _n("View", "Views", get_post_views(get_the_ID()), "sakura") /*次阅读*/;
+                $t .= $edit_this_post_link . '</p>';
             endwhile;
         endif;
     } elseif (is_page()) {
