@@ -335,8 +335,8 @@ function the_headPattern()
                 } else {
                     $edit_this_post_link = '';
                 }
-                $post_time = get_post_time('U', false);
-                $update_time = get_post_modified_time('U', false);
+                $post_time = get_post_time('U', true);
+                $update_time = get_post_modified_time('U', true);
                 $t .= the_title('<h1 class="entry-title">', '</h1>', false);
                 $t .= '<p class="entry-census">';
                 $t .= '<span><a href="#"><img src="' . get_avatar_url(get_the_author_meta('ID'), 64) /*$ava*/. '"></a></span>';

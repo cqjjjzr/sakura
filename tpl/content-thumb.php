@@ -39,8 +39,8 @@ while (have_posts()):
                 <div class="post-date">
                     <i class="iconfont icon-time"></i>
                     <?php
-                    $post_time = get_post_time('U', false);
-                    $update_time = get_post_modified_time('U', false);
+                    $post_time = get_post_time('U', true);
+                    $update_time = get_post_modified_time('U', true);
                     echo poi_time_since($post_time); ?>
                     <?php
                     if ($update_time > $post_time): ?>
