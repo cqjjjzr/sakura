@@ -250,13 +250,20 @@ function convertip($ip)
 {
     error_reporting(E_ALL ^ E_NOTICE);
     if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) === false) {
-        $file_contents = file_get_contents('http://ip.taobao.com/outGetIpInfo?accessKey=alibaba-inc&ip='.$ip);
+        #$file_contents = file_get_contents('http://ip.taobao.com/outGetIpInfo?accessKey=alibaba-inc&ip='.$ip);
+        #$result = json_decode($file_contents,true);
+        #if ($result['data']['country'] != '中国') {
+        #    return $result['data']['country'];
+        #} else {
+        #    return $result['data']['region'].'&nbsp;·&nbsp;'.$result['data']['city'].'&nbsp;·&nbsp;'.$result['data']['isp'];
+        #}
+        $file_contents = file_get_contents('http://ip-api.com/json/'.$ip.'?lang=zh-CN');
         $result = json_decode($file_contents,true);
-        if ($result['data']['country'] != '中国') {
-            return $result['data']['country'];
-        } else {
-            return $result['data']['region'].'&nbsp;·&nbsp;'.$result['data']['city'].'&nbsp;·&nbsp;'.$result['data']['isp'];
-        }
+	if ($result['country'] != '中国') {
+	    return $result['country'].'&nbsp;·&nbsp;'.$result['regionName'].'&nbsp;·&nbsp;'.$result['isp'];
+	} else {
+	    return $result['regionName'].'&nbsp;·&nbsp;'.$result['city'].'&nbsp;·&nbsp;'.$result['isp'];
+	}
     } else {
         $dat_path = dirname(__FILE__) . '/inc/QQWry.Dat';
         if (!$fd = @fopen($dat_path, 'rb')) {
@@ -1001,7 +1008,7 @@ function comment_mail_notify($comment_id)
                       margin: 10px auto 0; " target="_blank" href="' . htmlspecialchars(get_comment_link($parent_id)) . '">点击查看回复的完整內容</a>
       </div>
         <p style="font-size: 12px;text-align: center;color: #999;">本邮件为系统自动发出，请勿直接回复<br>
-        &copy; ' . date(Y) . ' ' . get_option("blogname") . '</p>
+        &copy; ' . date("Y") . ' ' . get_option("blogname") . '</p>
       </div>
     </div>
 ';
@@ -1810,10 +1817,10 @@ function markdown_parser($incoming_comment)
         siren_ajax_comment_err('评论只支持Markdown啦，见谅╮(￣▽￣)╭<br>Markdown Supported while <i class="fa fa-code" aria-hidden="true"></i> Forbidden');
         return ($incoming_comment);
     }
-    $myCustomer = $wpdb->get_row("SELECT * FROM wp_comments");
+    $myCustomer = $wpdb->get_row("SELECT * FROM ". $wpdb->prefix ."comments");
     //Add column if not present.
     if (!isset($myCustomer->comment_markdown)) {
-        $wpdb->query("ALTER TABLE wp_comments ADD comment_markdown text");
+        $wpdb->query("ALTER TABLE ". $wpdb->prefix ."comments ADD comment_markdown text");
     }
     $comment_markdown_content = $incoming_comment['comment_content'];
     include 'inc/Parsedown.php';
@@ -1831,7 +1838,7 @@ function save_markdown_comment($comment_ID, $comment_approved)
     $comment = get_comment($comment_ID);
     $comment_content = $comment_markdown_content;
     //store markdow content
-    $wpdb->query("UPDATE wp_comments SET comment_markdown='" . $comment_content . "' WHERE comment_ID='" . $comment_ID . "';");
+    $wpdb->query("UPDATE ". $wpdb->prefix ."comments SET comment_markdown='" . $comment_content . "' WHERE comment_ID='" . $comment_ID . "';");
 }
 add_action('comment_post', 'save_markdown_comment', 10, 2);
 
@@ -1909,6 +1916,22 @@ function permalink_tip()
     }
 }
 add_action('admin_notices', 'permalink_tip');
+
+function check_search_blackseo($search, $wp_query){
+    if (str_contains(get_search_query(), '.')) {
+        $wp_query->set_404();
+        status_header(404);
+        get_template_part(404);
+        exit();
+    }
+    else
+        return $search;
+}
+
+add_action('posts_search', 'check_search_blackseo', 500, 2);
+
+
+
 //code end
 //
 //add_action( 'shutdown', 'wpse115322_upload_sizes', 99 );
