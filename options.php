@@ -909,6 +909,15 @@ function optionsframework_options()
     );
 
     $options[] = array(
+        'name' => __('Matrix', 'sakura'),
+        'desc' => __('Matrix address', 'sakura'),
+        /*GitHub地址*/
+        'id' => 'matrix',
+        'std' => '',
+        'type' => 'text'
+    );
+
+    $options[] = array(
         'name' => __('Lofter', 'sakura'),
         'desc' => __('Lofter address', 'sakura'),
         /*lofter地址*/

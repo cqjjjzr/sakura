@@ -73,6 +73,9 @@
                 <?php } ?>	
                 <?php if (akina_option('csdn')){ ?>
                 <li><a href="<?php echo akina_option('csdn', ''); ?>" target="_blank" class="social-wangyiyun" title="CSDN"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/csdn.png"/></a></li>
+                <?php } ?>
+                <?php if (akina_option('matrix')){ ?>
+                <li><a href="<?php echo akina_option('matrix', ''); ?>" target="_blank" class="social-matrix" title="Matrix"><img src="/wp-content/themes/sakura/images/matrix-logo.svg"/></a></li>
                 <?php } ?>	
                 <?php if (akina_option('email_name') && akina_option('email_domain')){ ?>
                 <li><a onclick="mail_me()" class="social-wangyiyun" title="E-mail"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/email.svg"/></a></li>
