@@ -1,27 +1,38 @@
-#, fuzzy
+# Copyright (C) 2023 Mashiro, Spirit, Louie, Fuzzz
+# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Sakura\n"
-"POT-Creation-Date: 2020-08-06 17:39+0800\n"
-"PO-Revision-Date: 2019-11-01 14:27+0800\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Project-Id-Version: Sakura 3.4.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sakura\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
-"X-Poedit-Basepath: ..\n"
-"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: style.css\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.js\n"
+"POT-Creation-Date: 2023-05-15T10:45:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: sakura\n"
 
-#: 404.php:18
-#, php-format
-msgid "page %s"
+#. Theme Name of the theme
+#: options.php:577
+msgid "Sakura"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://github.com/mashirozx/Sakura/"
+msgstr ""
+
+#. Description of the theme
+msgid "A wonderful branch of theme Akina"
+msgstr ""
+
+#. Author of the theme
+msgid "Mashiro, Spirit, Louie, Fuzzz"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://2heng.xin"
 msgstr ""
 
 #: 404.php:47
@@ -36,95 +47,99 @@ msgstr ""
 msgid "Don't worry, search in site?"
 msgstr ""
 
-#: 404.php:54 footer.php:62 search.php:42
-msgid "Search..."
-msgstr ""
-
-#: comments.php:21
+#: comments.php:22
 msgid "view comments"
 msgstr ""
 
-#: comments.php:22 comments.php:27
+#: comments.php:24
+#: comments.php:31
 msgid " comment"
 msgstr ""
 
-#: comments.php:22 comments.php:27
+#: comments.php:24
+#: comments.php:31
 msgid " comments"
 msgstr ""
 
-#: comments.php:43
+#: comments.php:49
 msgid "no comment"
 msgstr ""
 
-#: comments.php:53
+#: comments.php:61
 msgid "I'm not a robot"
 msgstr ""
 
-#: comments.php:54
+#: comments.php:62
 msgid "Comment in private"
 msgstr ""
 
-#: comments.php:55
+#: comments.php:63
 msgid "Comment reply notify"
 msgstr ""
 
-#: comments.php:60
+#: comments.php:68
 msgid "Leave a Reply to"
 msgstr ""
 
-#: comments.php:61
+#: comments.php:69
 msgid "Cancel Reply"
 msgstr ""
 
-#: comments.php:62
+#: comments.php:70
 msgid "BiuBiuBiu~"
 msgstr ""
 
-#: comments.php:63
+#: comments.php:71
 msgid "You are a surprise that I will only meet once in my life"
 msgstr ""
 
-#: comments.php:67
+#: comments.php:75
 msgid "Click me OωO"
 msgstr ""
 
-#: comments.php:68
+#: comments.php:76
 msgid "Woooooow ヾ(≧∇≦*)ゝ"
 msgstr ""
 
-#: comments.php:93
+#: comments.php:103
 msgid "Auto pull nickname and avatar with a QQ num. entered"
 msgstr ""
 
-#: comments.php:93
+#: comments.php:103
 msgid "Nickname or QQ number"
 msgstr ""
 
-#: comments.php:93
+#: comments.php:103
 msgid "Name* "
 msgstr ""
 
-#: comments.php:95
+#: comments.php:105
 msgid "You will receive notification by email"
 msgstr ""
 
-#: comments.php:95
+#: comments.php:105
 msgid "email"
 msgstr ""
 
-#: comments.php:95
+#: comments.php:105
 msgid "Must* "
 msgstr ""
 
-#: comments.php:97
+#: comments.php:107
 msgid "Advertisement is forbidden 😀"
 msgstr ""
 
-#: comments.php:97
+#: comments.php:107
 msgid "Site"
 msgstr ""
 
-#: footer.php:76 footer.php:84
+#: footer.php:62
+#: search.php:42
+msgid "Search..."
+msgstr ""
+
+#: footer.php:76
+#: footer.php:84
 msgid "Want to find something?"
 msgstr ""
 
@@ -132,98 +147,73 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: footer.php:145
-msgid "Widgets"
-msgstr ""
-
-#: functions.php:51
+#: functions.php:52
 msgid "Nav Menus"
 msgstr ""
 
-#: functions.php:423 inc/theme_plus.php:186 layouts/authorprofile.php:11
+#: functions.php:451
+#: inc/theme_plus.php:204
 #: options.php:121
 msgid "Author"
 msgstr ""
 
-#: functions.php:423
+#: functions.php:451
 msgid "Blogger"
 msgstr ""
 
-#: functions.php:427
+#: functions.php:462
 msgid "Location"
 msgstr ""
 
-#: functions.php:431
+#: functions.php:469
 msgid "Private"
 msgstr ""
 
-#: functions.php:433
+#: functions.php:471
 msgid "Yes"
 msgstr ""
 
-#: functions.php:435
+#: functions.php:473
 msgid "No"
 msgstr ""
 
-#: functions.php:438
-msgid "Edit"
-msgstr ""
-
-#: functions.php:527
+#: functions.php:568
 msgid "Please install pulgin <a href=\"https://wordpress.org/plugins/wp-statistics/\" target=\"_blank\">WP-Statistics</a>"
 msgstr ""
 
-#: functions.php:577
+#: functions.php:618
 msgid "This guy is so lazy ╮(╯▽╰)╭"
 msgstr ""
 
-#: functions.php:1335
+#: functions.php:1378
 msgid "All expand/collapse"
 msgstr ""
 
-#: functions.php:1356 options.php:980
-msgid " "
-msgstr ""
-
-#: functions.php:1360
+#: functions.php:1407
 msgid " post(s)"
 msgstr ""
 
-#: functions.php:1383 functions.php:1386 inc/theme_plus.php:478
-msgid "Dashboard"
-msgstr ""
-
-#: functions.php:1612
-msgid "<b>ERROR</b>: This email domain (<b>@"
-msgstr ""
-
-#: functions.php:1717
-msgid "QQ"
-msgstr ""
-
-#: functions.php:1779
-msgid "Sidebar"
-msgstr ""
-
-#: functions.php:1892
+#: functions.php:1954
 msgid "<b> For a better experience, please do not set <a href=\"/wp-admin/options-permalink.php\"> permalink </a> as plain. To do this, you may need to configure <a href=\"https://www.wpdaxue.com/wordpress-rewriterule.html\" target=\"_blank\"> pseudo-static </a>. </ b>"
 msgstr ""
 
-#: header.php:35
-#, php-format
+#: header.php:37
 msgid "page %s "
 msgstr ""
 
-#: inc/categories-images.php:45 inc/categories-images.php:66
+#: inc/categories-images.php:45
+#: inc/categories-images.php:66
 msgid "category/tag image"
 msgstr ""
 
-#: inc/categories-images.php:48 inc/categories-images.php:68
+#: inc/categories-images.php:48
+#: inc/categories-images.php:68
 #: inc/categories-images.php:197
 msgid "add image"
 msgstr ""
 
-#: inc/categories-images.php:69 inc/categories-images.php:198
+#: inc/categories-images.php:69
+#: inc/categories-images.php:198
 msgid "remove image"
 msgstr ""
 
@@ -235,25 +225,15 @@ msgstr ""
 msgid "no image"
 msgstr ""
 
-#: inc/classes/Cache.php:70 inc/theme_plus.php:727
+#: inc/classes/Cache.php:70
+#: inc/theme_plus.php:825
 msgid "The comment is private"
 msgstr ""
 
-#: inc/options-framework.php:182 inc/options-framework.php:183
+#: inc/options-framework.php:182
+#: inc/options-framework.php:183
 #: inc/options-framework.php:412
 msgid "Sakura Options"
-msgstr ""
-
-#: inc/options-framework.php:228
-msgid "Clear"
-msgstr ""
-
-#: inc/options-framework.php:229
-msgid "Default"
-msgstr ""
-
-#: inc/options-framework.php:230
-msgid "Select Color"
 msgstr ""
 
 #: inc/options-framework.php:275
@@ -268,23 +248,17 @@ msgstr ""
 msgid "All setting will be lost, sure?"
 msgstr ""
 
-#: inc/options-framework.php:308
-msgid "Default options restored."
-msgstr ""
-
-#: inc/options-framework.php:362
-msgid "Options saved."
-msgstr ""
-
 #: inc/options-media-uploader.php:51
 msgid "Choose file"
 msgstr ""
 
-#: inc/options-media-uploader.php:54 inc/options-media-uploader.php:113
+#: inc/options-media-uploader.php:54
+#: inc/options-media-uploader.php:113
 msgid "Upload"
 msgstr ""
 
-#: inc/options-media-uploader.php:56 inc/options-media-uploader.php:114
+#: inc/options-media-uploader.php:56
+#: inc/options-media-uploader.php:114
 msgid "Remove"
 msgstr ""
 
@@ -297,133 +271,136 @@ msgid "View File"
 msgstr ""
 
 #: inc/template-tags.php:28
-#, php-format
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
 #: inc/template-tags.php:33
-#, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:50 inc/template-tags.php:56
+#: inc/template-tags.php:50
+#: inc/template-tags.php:56
 msgid ", "
 msgstr ""
 
 #: inc/template-tags.php:52
-#, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
 #: inc/template-tags.php:58
-#, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
 #: inc/template-tags.php:65
-#, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:72 tpl/content-page.php:35
-#, php-format
+#: inc/template-tags.php:72
+#: tpl/content-page.php:35
 msgid "Edit %s"
 msgstr ""
 
-#: inc/theme_plus.php:60
+#: inc/theme_plus.php:65
 msgid " days ago"
 msgstr ""
 
-#: inc/theme_plus.php:61
+#: inc/theme_plus.php:67
 msgid " hours ago"
 msgstr ""
 
-#: inc/theme_plus.php:62
+#: inc/theme_plus.php:69
 msgid " minutes ago"
 msgstr ""
 
-#: inc/theme_plus.php:63
+#: inc/theme_plus.php:71
 msgid " seconds ago"
 msgstr ""
 
-#: inc/theme_plus.php:71
+#: inc/theme_plus.php:79
 msgid "Posted on "
 msgstr ""
 
-#: inc/theme_plus.php:130
+#: inc/theme_plus.php:141
 msgid "Please upgrade wordpress to version 4.4+"
 msgstr ""
 
-#: inc/theme_plus.php:232
+#: inc/theme_plus.php:252
 msgid "dashboard"
 msgstr ""
 
-#: inc/theme_plus.php:234
+#: inc/theme_plus.php:254
 msgid "home"
 msgstr ""
 
-#: inc/theme_plus.php:241
+#: inc/theme_plus.php:261
 msgid "Login successful, "
 msgstr ""
 
-#: inc/theme_plus.php:241
+#: inc/theme_plus.php:261
 msgid "seconds later automatically transfer to"
 msgstr ""
 
-#: inc/theme_plus.php:264
+#: inc/theme_plus.php:289
 msgid "Change avatar"
 msgstr ""
 
-#: inc/theme_plus.php:265
+#: inc/theme_plus.php:292
 msgid "Hello, "
 msgstr ""
 
-#: inc/theme_plus.php:269
+#: inc/theme_plus.php:301
 msgid "Home"
 msgstr ""
 
-#: inc/theme_plus.php:271
+#: inc/theme_plus.php:303
 msgid "Manage"
 msgstr ""
 
-#: inc/theme_plus.php:273
+#: inc/theme_plus.php:305
 msgid "Logout"
 msgstr ""
 
-#: inc/theme_plus.php:273
+#: inc/theme_plus.php:306
 msgid "Sign out? "
 msgstr ""
 
-#: inc/theme_plus.php:298 inc/theme_plus.php:353 inc/theme_plus.php:421
-#: tpl/content-single.php:16 tpl/single-image.php:18
+#: inc/theme_plus.php:334
+#: inc/theme_plus.php:408
+#: inc/theme_plus.php:488
+#: tpl/single-image.php:18
 msgid "View"
 msgid_plural "Views"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/theme_plus.php:310 inc/theme_plus.php:368 inc/theme_plus.php:436
-#, php-format
+#: inc/theme_plus.php:347
+#: inc/theme_plus.php:424
+#: inc/theme_plus.php:504
 msgid "Search results for \" %s \""
 msgstr ""
 
-#: inc/theme_plus.php:416
+#: inc/theme_plus.php:483
 msgid "EDIT"
 msgstr ""
 
-#: inc/theme_plus.php:479
+#: inc/theme_plus.php:559
+msgid "Dashboard"
+msgstr ""
+
+#: inc/theme_plus.php:560
 msgid "New post"
 msgstr ""
 
-#: inc/theme_plus.php:481
+#: inc/theme_plus.php:562
 msgid "Profile"
 msgstr ""
 
-#: inc/theme_plus.php:482
+#: inc/theme_plus.php:563
 msgid "Sign out"
 msgstr ""
 
@@ -431,31 +408,43 @@ msgstr ""
 msgid "View comments"
 msgstr ""
 
-#: options.php:34 options.php:45 options.php:312
+#: options.php:34
+#: options.php:45
+#: options.php:312
 msgid "1"
 msgstr ""
 
-#: options.php:35 options.php:46 options.php:313
+#: options.php:35
+#: options.php:46
+#: options.php:313
 msgid "2"
 msgstr ""
 
-#: options.php:36 options.php:47 options.php:314
+#: options.php:36
+#: options.php:47
+#: options.php:314
 msgid "3"
 msgstr ""
 
-#: options.php:37 options.php:48 options.php:315
+#: options.php:37
+#: options.php:48
+#: options.php:315
 msgid "4"
 msgstr ""
 
-#: options.php:38 options.php:49 options.php:316
+#: options.php:38
+#: options.php:49
+#: options.php:316
 msgid "5"
 msgstr ""
 
-#: options.php:39 options.php:317
+#: options.php:39
+#: options.php:317
 msgid "6"
 msgstr ""
 
-#: options.php:40 options.php:318
+#: options.php:40
+#: options.php:318
 msgid "7"
 msgstr ""
 
@@ -583,13 +572,21 @@ msgstr ""
 msgid "Search button"
 msgstr ""
 
-#: options.php:223 options.php:283 options.php:587 options.php:597
-#: options.php:607 options.php:617
+#: options.php:223
+#: options.php:283
+#: options.php:587
+#: options.php:597
+#: options.php:607
+#: options.php:617
 msgid "Open"
 msgstr ""
 
-#: options.php:224 options.php:284 options.php:588 options.php:598
-#: options.php:608 options.php:618
+#: options.php:224
+#: options.php:284
+#: options.php:588
+#: options.php:598
+#: options.php:608
+#: options.php:618
 msgid "Close"
 msgstr ""
 
@@ -605,7 +602,8 @@ msgstr ""
 msgid "Graphic"
 msgstr ""
 
-#: options.php:238 options.php:390
+#: options.php:238
+#: options.php:390
 msgid "Cover manifest"
 msgstr ""
 
@@ -617,11 +615,13 @@ msgstr ""
 msgid "same as the cover of the first screen (default)"
 msgstr ""
 
-#: options.php:245 options.php:398
+#: options.php:245
+#: options.php:398
 msgid "custom api (advanced)"
 msgstr ""
 
-#: options.php:250 options.php:403
+#: options.php:250
+#: options.php:403
 msgid "Cover images url"
 msgstr ""
 
@@ -757,7 +757,8 @@ msgstr ""
 msgid "Main switch"
 msgstr ""
 
-#: options.php:367 options.php:411
+#: options.php:367
+#: options.php:411
 msgid "Default on, check off"
 msgstr ""
 
@@ -794,7 +795,6 @@ msgid "built-in api (default)"
 msgstr ""
 
 #: options.php:404
-#, php-format
 msgid "Fill in the manifest path for random picture display, please refer to <a href = \"https: //github.com/mashirozx/Sakura/wiki/options\">Wiki </a>. If you select webp images above, click <a href = \"%s\">here</a> to update manifest"
 msgstr ""
 
@@ -862,7 +862,8 @@ msgstr ""
 msgid "Whether to turn on the top-feature"
 msgstr ""
 
-#: options.php:459 options.php:1212
+#: options.php:459
+#: options.php:1212
 msgid "Default on"
 msgstr ""
 
@@ -890,19 +891,24 @@ msgstr ""
 msgid "Top-feature 1 image"
 msgstr ""
 
-#: options.php:484 options.php:512 options.php:540
+#: options.php:484
+#: options.php:512
+#: options.php:540
 msgid "size 257px*160px"
 msgstr ""
 
-#: options.php:490 options.php:491
+#: options.php:490
+#: options.php:491
 msgid "Top-feature 1 title"
 msgstr ""
 
-#: options.php:497 options.php:498
+#: options.php:497
+#: options.php:498
 msgid "Top-feature 1 description"
 msgstr ""
 
-#: options.php:504 options.php:505
+#: options.php:504
+#: options.php:505
 msgid "Top-feature 1 link"
 msgstr ""
 
@@ -910,15 +916,18 @@ msgstr ""
 msgid "Top-feature 2 image"
 msgstr ""
 
-#: options.php:518 options.php:519
+#: options.php:518
+#: options.php:519
 msgid "Top-feature 2 title"
 msgstr ""
 
-#: options.php:525 options.php:526
+#: options.php:525
+#: options.php:526
 msgid "Top-feature 2 description"
 msgstr ""
 
-#: options.php:532 options.php:533
+#: options.php:532
+#: options.php:533
 msgid "Top-feature 2 link"
 msgstr ""
 
@@ -926,15 +935,18 @@ msgstr ""
 msgid "Top-feature 3 image"
 msgstr ""
 
-#: options.php:546 options.php:547
+#: options.php:546
+#: options.php:547
 msgid "Top-feature 3 title"
 msgstr ""
 
-#: options.php:553 options.php:554
+#: options.php:553
+#: options.php:554
 msgid "Top-feature 3 description"
 msgstr ""
 
-#: options.php:560 options.php:561
+#: options.php:560
+#: options.php:561
 msgid "Top-feature 3 link"
 msgstr ""
 
@@ -946,11 +958,8 @@ msgstr ""
 msgid "Post style"
 msgstr ""
 
-#: options.php:577
-msgid "Sakura"
-msgstr ""
-
-#: options.php:578 options.php:673
+#: options.php:578
+#: options.php:673
 msgid "GitHub"
 msgstr ""
 
@@ -1302,7 +1311,10 @@ msgstr ""
 msgid "Panel main color A"
 msgstr ""
 
-#: options.php:906 options.php:914 options.php:922 options.php:930
+#: options.php:906
+#: options.php:914
+#: options.php:922
+#: options.php:930
 msgid "<i>(array) (optional)</i> An array of CSS color definitions which are used to give the user a feel for the theme."
 msgstr ""
 
@@ -1322,7 +1334,9 @@ msgstr ""
 msgid "Panel icon color——base"
 msgstr ""
 
-#: options.php:938 options.php:946 options.php:954
+#: options.php:938
+#: options.php:946
+#: options.php:954
 msgid "<i>(array) (optional)</i> An array of CSS color definitions used to color any SVG icons."
 msgstr ""
 
@@ -1439,7 +1453,6 @@ msgid "About"
 msgstr ""
 
 #: options.php:1053
-#, php-format
 msgid "Theme Sakura v %s  |  <a href=\"https://2heng.xin/theme-sakura/\">Theme document</a>  |  <a href=\"https://github.com/mashirozx/Sakura/\">Source code</a><a href=\"https://github.com/mashirozx/Sakura/releases/latest\"><img src=\"https://img.shields.io/github/release/mashirozx/Sakura.svg?style=flat-square\" alt=\"GitHub release\"></a>"
 msgstr ""
 
@@ -1515,7 +1528,9 @@ msgstr ""
 msgid "Enable NProgress progress bar"
 msgstr ""
 
-#: options.php:1115 options.php:1122 options.php:1129
+#: options.php:1115
+#: options.php:1122
+#: options.php:1129
 msgid "Default off, check on"
 msgstr ""
 
@@ -1555,7 +1570,8 @@ msgstr ""
 msgid "The categories of articles that don't not show on homepage"
 msgstr ""
 
-#: options.php:1155 options.php:1162
+#: options.php:1155
+#: options.php:1162
 msgid "Fill in category ID, multiple IDs are divided by a comma \",\""
 msgstr ""
 
@@ -1647,8 +1663,15 @@ msgstr ""
 msgid "For sending system mail, the sender address displayed in the user's mailbox, do not use Chinese, the default system email address is bibi@your_domain_name"
 msgstr ""
 
+#. Template Name of the theme
+msgid "archive"
+msgstr ""
+
+#. Template Name of the theme
+msgid "links"
+msgstr ""
+
 #: search.php:19
-#, php-format
 msgid "search result: %s"
 msgstr ""
 
@@ -1656,17 +1679,23 @@ msgstr ""
 msgid "NOTHING"
 msgstr ""
 
-#: tpl/content-image.php:35 tpl/content-status.php:31 tpl/content-thumb.php:43
+#: tpl/content-image.php:35
+#: tpl/content-status.php:31
+#: tpl/content-thumb.php:43
 #: tpl/content.php:34
 msgid "Comment"
 msgstr ""
 
-#: tpl/content-image.php:35 tpl/content-status.php:31 tpl/content-thumb.php:43
+#: tpl/content-image.php:35
+#: tpl/content-status.php:31
+#: tpl/content-thumb.php:43
 #: tpl/content.php:34
 msgid "Comments"
 msgstr ""
 
-#: tpl/content-image.php:38 tpl/content-status.php:34 tpl/content-thumb.php:42
+#: tpl/content-image.php:38
+#: tpl/content-status.php:34
+#: tpl/content-thumb.php:42
 #: tpl/content.php:37
 msgid "Hit"
 msgid_plural "Hits"
@@ -1678,7 +1707,6 @@ msgid "There is nothing here！"
 msgstr ""
 
 #: tpl/content-none.php:21
-#, php-format
 msgid "Ready to post your first article? <a href=\"%1$s\">Click here to start</a>."
 msgstr ""
 
@@ -1690,27 +1718,40 @@ msgstr ""
 msgid "We didn't seem to find what you want. Maybe you can search for it."
 msgstr ""
 
-#: tpl/content-page.php:24 tpl/content-single.php:25 tpl/single-image.php:28
+#: tpl/content-page.php:24
 msgid "Pages:"
 msgstr ""
 
-#: tpl/content-single.php:34
+#: tpl/content-single.php:27
 msgid "Attribution-NonCommercial-ShareAlike 4.0 International"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Bangumi"
 msgstr ""
 
 #: user/page-bangumi.php:30
 msgid "Please fill in the Bilibili UID in Sakura Options."
 msgstr ""
 
-#: user/page-login.php:18
-msgid "Remember Me"
+#. Template Name of the theme
+msgid "Login"
 msgstr ""
 
-#: user/page-register.php:14 user/page-register.php:16
-#: user/page-register.php:19 user/page-register.php:24
-#: user/page-register.php:26 user/page-register.php:29
-#: user/page-register.php:34 user/page-register.php:36
-#: user/page-register.php:41 user/page-register.php:47
+#. Template Name of the theme
+msgid "Register"
+msgstr ""
+
+#: user/page-register.php:14
+#: user/page-register.php:16
+#: user/page-register.php:19
+#: user/page-register.php:24
+#: user/page-register.php:26
+#: user/page-register.php:29
+#: user/page-register.php:34
+#: user/page-register.php:36
+#: user/page-register.php:41
+#: user/page-register.php:47
 msgid "Error"
 msgstr ""
 
@@ -1772,4 +1813,8 @@ msgstr ""
 
 #: user/page-register.php:95
 msgid "Registration is not open yet."
+msgstr ""
+
+#. Template Name of the theme
+msgid "时光轴"
 msgstr ""
