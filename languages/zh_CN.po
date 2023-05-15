@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Sakura\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sakura\n"
 "POT-Creation-Date: 2023-05-15T11:22:46+00:00\n"
-"PO-Revision-Date: 2023-05-15 19:24+0800\n"
+"PO-Revision-Date: 2023-05-15 19:49+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -331,7 +331,7 @@ msgstr "发布于 "
 
 #: inc/theme_plus.php:81
 msgid "Last updated on "
-msgstr "最后一次更新 "
+msgstr "最后更新 "
 
 #: inc/theme_plus.php:143
 msgid "Please upgrade wordpress to version 4.4+"
