@@ -209,7 +209,7 @@ if (!function_exists('siren_ajax_comment_callback')) {
                                                 title="<?php esc_attr_e('Author', 'sakura'); ?>"></span></a></h4>
                                 </div>
                                 <div class="right">
-                                    <div class="info"><time datetime="<?php comment_date('Y-m-d'); ?>"><?php echo poi_time_since(strtotime($comment->comment_date), true); //comment_date(get_option('date_format')); ?></time></div>
+                                    <div class="info"><time datetime="<?php comment_date('Y-m-d'); ?>"><?php echo poi_time_since(strtotime($comment->comment_date_gmt), true); //comment_date(get_option('date_format')); ?></time></div>
                                 </div>
                             </section>
                         </div>
