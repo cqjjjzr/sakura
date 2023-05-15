@@ -56,6 +56,9 @@
                 <?php if (akina_option('wangyiyun')){ ?>
                 <li><a href="<?php echo akina_option('wangyiyun', ''); ?>" target="_blank" class="social-wangyiyun" title="CloudMusic"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/wangyiyun.png"/></a></li>
                 <?php } ?>
+                <?php if (akina_option('misskey')){ ?>
+                <li><a href="<?php echo akina_option('misskey', ''); ?>" target="_blank" class="social-misskey" title="Misskey"><img src="https://m.chariri.moe/favicon.ico"/></a></li>
+                <?php } ?>	
                 <?php if (akina_option('twitter')){ ?>
                 <li><a href="<?php echo akina_option('twitter', ''); ?>" target="_blank" class="social-wangyiyun" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/twitter.png"/></a></li>
                 <?php } ?>	
@@ -70,7 +73,7 @@
                 <?php } ?>	
                 <?php if (akina_option('csdn')){ ?>
                 <li><a href="<?php echo akina_option('csdn', ''); ?>" target="_blank" class="social-wangyiyun" title="CSDN"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/csdn.png"/></a></li>
-                <?php } ?>		
+                <?php } ?>	
                 <?php if (akina_option('email_name') && akina_option('email_domain')){ ?>
                 <li><a onclick="mail_me()" class="social-wangyiyun" title="E-mail"><img src="https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/sns/email.svg"/></a></li>
                 <?php } ?>	
