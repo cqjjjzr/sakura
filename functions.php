@@ -545,8 +545,33 @@ function restyle_text($number)
     }
 }
 
+function check_ua_eligible_for_pv_inc() {
+    if (isset($_SERVER['HTTP_FROM'])) {
+        $from = $_SERVER['HTTP_FROM'];
+        if (strlen(trim($from)) > 0) {
+            return false;
+        }
+    }
+    if (isset($_SERVER['HTTP_USER_AGENT'])) {
+        $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
+        if (str_contains($ua, 'misskey')
+            || str_contains($ua, 'crawl')
+            || str_contains($ua, 'curl')
+            || str_contains($ua, 'requests')
+            || str_contains($ua, 'fetch')
+            || str_contains($ua, 'facebook')
+            || str_contains($ua, 'spider')) {
+            return false;
+        }
+    }
+    return true;
+}
+
 function set_post_views()
 {
+    if (!check_ua_eligible_for_pv_inc()) {
+        return;
+    }
     if (is_singular()) {
         global $post;
         $post_id = intval($post->ID);
