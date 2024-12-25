@@ -646,6 +646,7 @@ function tableOfContentScroll(flag) {
             var id = 1,
                 heading_fix = mashiro_option.entry_content_theme == "sakura" ? $("article").hasClass("type-post") ? $("div").hasClass("pattern-attachment-img") ? -75 : 200 : 375 : window.innerHeight / 2;
             $(".entry-content , .links").children("h1,h2,h3,h4,h5").each(function () {
+                if (this.id) return;
                 var hyphenated = "toc-head-" + id;
                 this.id = hyphenated;
                 id++;
